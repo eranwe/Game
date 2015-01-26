@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="3" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <set-val-31-42 comment="false" x="26" y="40">
+                    <mousestate comment="false" id="0" x="0" y="0">
+                        <int id="0" val="1"/>
+                    </mousestate>
+                </set-val-31-42>
+                <if comment="false" x="26" y="73">
+                    <group eventID="3" id="-1">
+                        <set-val-31-52 comment="false" x="37" y="103">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-31-52>
+                        <if comment="false" x="37" y="128">
+                            <group eventID="3" id="-1">
+                                <set-val-31-57 comment="false" x="48" y="153">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-31-57>
+                                <dolater comment="false" x="48" y="178">
+                                    <group eventID="3" id="-1">
+                                        <set-val-31-57 comment="false" x="59" y="210">
+                                            <false comment="false" id="0" x="0" y="0"/>
+                                        </set-val-31-57>
+                                        <if comment="false" x="59" y="235">
+                                            <group eventID="3" id="-1">
+                                                <set-val-31-57 comment="false" x="70" y="265">
+                                                    <false comment="false" id="0" x="0" y="0"/>
+                                                </set-val-31-57>
+                                                <cancel comment="false" x="70" y="290"/>
+                                            </group>
+                                            <not comment="false" id="0" x="0" y="0">
+                                                <get-val-31-52 comment="false" id="0" x="0" y="0"/>
+                                            </not>
+                                        </if>
+                                    </group>
+                                    <get-val-31-62 comment="false" id="0" x="0" y="0"/>
+                                    <ACTOR eid="this" id="2"/>
+                                </dolater>
+                            </group>
+                            <get-val-31-60 comment="false" id="0" x="0" y="0"/>
+                        </if>
+                        <else comment="false" x="37" y="346">
+                            <group eventID="3" id="-1">
+                                <push-shove comment="false" x="48" y="366">
+                                    <ACTOR eid="this" id="0"/>
+                                    <int id="1" val="1"/>
+                                    <int id="2" val="0"/>
+                                    <int id="3" val="-1"/>
+                                    <get-val-31-45 comment="false" id="4" x="0" y="0"/>
+                                </push-shove>
+                            </group>
+                        </else>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-31-42 comment="false" id="0" x="0" y="0"/>
+                        <get-val-31-43 comment="false" id="1" x="0" y="0"/>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="422">
+                    <group eventID="3" id="-1">
+                        <push-shove comment="false" x="37" y="460">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                            <int id="2" val="0"/>
+                            <int id="3" val="-1"/>
+                            <div comment="false" id="4" x="0" y="0">
+                                <get-val-31-45 comment="false" id="0" x="0" y="0"/>
+                                <stepsize comment="false" id="1" x="0" y="0"/>
+                            </div>
+                        </push-shove>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-31-57 comment="false" id="0" x="0" y="0"/>
+                        <mousestate comment="false" id="1" x="0" y="0">
+                            <int id="0" val="0"/>
+                        </mousestate>
+                    </and>
+                </if>
+                <set-val-31-58 comment="false" x="26" y="509">
+                    <get-val-31-42 comment="false" id="0" x="0" y="0"/>
+                </set-val-31-58>
+                <set-val-31-42 comment="false" x="26" y="534">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-31-42>
+                <set-val-31-43 comment="false" x="26" y="559">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-31-43>
+            </group>
+        </step>
+    </group>
+    <group eventID="3" id="-1"/>
+    <group eventID="7" id="0">
+        <event-custom comment="false" x="15" y="15">
+            <group eventID="7" id="-1">
+                <set-val-31-42 comment="false" x="26" y="40">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-31-42>
+                <set-val-31-57 comment="false" x="26" y="65">
+                    <true comment="false" id="0" x="0" y="0"/>
+                </set-val-31-57>
+            </group>
+            <int id="0" val="Jump"/>
+        </event-custom>
+    </group>
+    <group eventID="7" id="-1"/>
+    <group eventID="8" id="0">
+        <collide comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="45">
+                    <group eventID="8" id="-1">
+                        <set-val-31-43 comment="false" x="37" y="88">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-31-43>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <collision-bottom comment="false" id="0" x="0" y="0">
+                            <int id="0" val="0"/>
+                            <int id="1" val="0"/>
+                        </collision-bottom>
+                        <not comment="false" id="1" x="0" y="0">
+                            <collision-type comment="false" id="0" x="0" y="0">
+                                <int id="0" val="0"/>
+                                <int id="1" val="3"/>
+                            </collision-type>
+                        </not>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="125">
+                    <group eventID="8" id="-1">
+                        <set-val-31-52 comment="false" x="37" y="160">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-31-52>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <get-val-31-43 comment="false" id="0" x="0" y="0"/>
+                        <not comment="false" id="1" x="0" y="0">
+                            <get-val-31-58 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                    </and>
+                </if>
+            </group>
+        </collide>
+    </group>
+    <group eventID="8" id="-1"/>
+</groups>

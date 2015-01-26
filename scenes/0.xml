@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scene depth="1" desc="" eventsnippetid="0" extheight="544" extwidth="704" extx="-32" exty="-32" format="3.2.0" gravx="-0.0" gravy="300.0" height="480" id="0" name="Main" revision="" savecount="0" tiled="1" tileh="32" tilew="32" type="standard" width="640">
+    <layers>
+        <color-bg blue="255" green="255" red="255"/>
+        <background blendMode="normal" customScrollFactor="false" id="1" locked="true" name="Background" opacity="100" order="1" rid="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+        <layer blendMode="normal" color="0,204,255" id="0" locked="false" name="Layer 0" opacity="100" order="0" scrollFactorX="1.0" scrollFactorY="1.0" visible="true"/>
+    </layers>
+    <joints/>
+    <regions>
+        <region b="64" g="64" h="33" id="0" name="Region 0" pts="4,24.0,0.0,24.0,33.0,0.0,33.0,0.0,0.0" r="64" type="box" w="24" x="577" y="50"/>
+    </regions>
+    <terrainRegions/>
+    <actors>
+        <actor a="0.0" aid="32" c="false" group="1" id="38" name="Spinning Coin 32" sx="1.0" sy="1.0" x="422" y="129" z="0"/>
+        <actor a="0.0" aid="33" c="false" group="1" id="56" name="Invisible Block 33" sx="0.2" sy="0.2" x="118" y="107" z="0"/>
+        <actor a="0.0" aid="34" c="false" group="1" id="38" name="Spinning Coin 34" sx="1.0" sy="1.0" x="135" y="259" z="0"/>
+        <actor a="0.0" aid="35" c="false" group="1" id="38" name="Spinning Coin 35" sx="1.0" sy="1.0" x="578" y="55" z="0"/>
+        <actor a="0.0" aid="36" c="false" group="1" id="56" name="Invisible Block 36" sx="1.0" sy="1.0" x="545" y="103" z="0"/>
+        <actor a="0.0" aid="14" c="false" group="0" id="48" name="Mambo 14" sx="1.0" sy="1.0" x="601" y="351" z="0"/>
+        <actor a="0.0" aid="15" c="false" group="1" id="38" name="Spinning Coin 15" sx="1.0" sy="1.0" x="488" y="325" z="0"/>
+        <actor a="0.0" aid="16" c="false" group="1" id="38" name="Spinning Coin 16" sx="1.0" sy="1.0" x="456" y="295" z="0"/>
+        <actor a="0.0" aid="17" c="false" group="1" id="38" name="Spinning Coin 17" sx="1.0" sy="1.0" x="423" y="290" z="0"/>
+        <actor a="0.0" aid="18" c="false" group="1" id="38" name="Spinning Coin 18" sx="1.0" sy="1.0" x="390" y="260" z="0"/>
+        <actor a="0.0" aid="19" c="false" group="1" id="38" name="Spinning Coin 19" sx="1.0" sy="1.0" x="261" y="260" z="0"/>
+        <actor a="0.0" aid="20" c="false" group="1" id="38" name="Spinning Coin 20" sx="1.0" sy="1.0" x="228" y="260" z="0"/>
+        <actor a="0.0" aid="21" c="false" group="1" id="38" name="Spinning Coin 21" sx="1.0" sy="1.0" x="197" y="259" z="0"/>
+        <actor a="0.0" aid="22" c="false" group="1" id="38" name="Spinning Coin 22" sx="1.0" sy="1.0" x="165" y="258" z="0"/>
+        <actor a="0.0" aid="23" c="false" group="1" id="38" name="Spinning Coin 23" sx="1.0" sy="1.0" x="311" y="379" z="0"/>
+        <actor a="0.0" aid="24" c="false" group="1" id="38" name="Spinning Coin 24" sx="1.0" sy="1.0" x="102" y="259" z="0"/>
+        <actor a="0.0" aid="25" c="false" group="1" id="38" name="Spinning Coin 25" sx="1.0" sy="1.0" x="70" y="224" z="0"/>
+        <actor a="0.0" aid="26" c="false" group="1" id="38" name="Spinning Coin 26" sx="1.0" sy="1.0" x="35" y="190" z="0"/>
+        <actor a="0.0" aid="27" c="false" group="1" id="38" name="Spinning Coin 27" sx="1.0" sy="1.0" x="261" y="102" z="0"/>
+        <actor a="0.0" aid="28" c="false" group="1" id="38" name="Spinning Coin 28" sx="1.0" sy="1.0" x="296" y="129" z="0"/>
+        <actor a="0.0" aid="29" c="false" group="1" id="38" name="Spinning Coin 29" sx="1.0" sy="1.0" x="328" y="129" z="0"/>
+        <actor a="0.0" aid="30" c="false" group="1" id="38" name="Spinning Coin 30" sx="1.0" sy="1.0" x="359" y="133" z="0"/>
+        <actor a="0.0" aid="31" c="false" group="1" id="38" name="Spinning Coin 31" sx="1.0" sy="1.0" x="388" y="129" z="0"/>
+    </actors>
+    <snippets>
+        <s enabled="true" id="45">
+            <prop id="1" list="0" val="14"/>
+            <prop id="3" list="0" val="0"/>
+            <prop id="4" list="0" val="1"/>
+        </s>
+    </snippets>
+    <terrain>
+        <p pts="4,0.0,96.0,0.0,0.0,288.0,0.0,288.0,96.0" x="0.0" y="384.0"/>
+        <p pts="8,0.0,96.0,0.0,0.0,32.0,0.0,32.0,32.0,64.0,32.0,64.0,64.0,256.0,64.0,256.0,96.0" x="32.0" y="224.0"/>
+        <p pts="12,64.0,0.0,64.0,32.0,128.0,32.0,128.0,64.0,160.0,64.0,160.0,96.0,288.0,96.0,288.0,192.0,0.0,192.0,0.0,96.0,32.0,96.0,32.0,0.0" x="352.0" y="288.0"/>
+        <p pts="6,32.0,0.0,32.0,32.0,192.0,32.0,192.0,64.0,0.0,64.0,0.0,0.0" x="256.0" y="128.0"/>
+    </terrain>
+    <atlases members="" retainAtlases="true"/>
+</scene>

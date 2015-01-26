@@ -1,0 +1,171 @@
+package scripts;
+
+import com.stencyl.graphics.G;
+import com.stencyl.graphics.BitmapWrapper;
+
+import com.stencyl.behavior.Script;
+import com.stencyl.behavior.ActorScript;
+import com.stencyl.behavior.SceneScript;
+import com.stencyl.behavior.TimedTask;
+
+import com.stencyl.models.Actor;
+import com.stencyl.models.GameModel;
+import com.stencyl.models.actor.Animation;
+import com.stencyl.models.actor.ActorType;
+import com.stencyl.models.actor.Collision;
+import com.stencyl.models.actor.Group;
+import com.stencyl.models.Scene;
+import com.stencyl.models.Sound;
+import com.stencyl.models.Region;
+import com.stencyl.models.Font;
+
+import com.stencyl.Engine;
+import com.stencyl.Input;
+import com.stencyl.Key;
+import com.stencyl.utils.Utils;
+
+import nme.ui.Mouse;
+import nme.display.Graphics;
+import nme.display.BlendMode;
+import nme.display.BitmapData;
+import nme.display.Bitmap;
+import nme.events.Event;
+import nme.events.KeyboardEvent;
+import nme.events.TouchEvent;
+import nme.net.URLLoader;
+
+import box2D.common.math.B2Vec2;
+import box2D.dynamics.B2Body;
+import box2D.dynamics.B2Fixture;
+import box2D.dynamics.joints.B2Joint;
+
+import motion.Actuate;
+import motion.easing.Back;
+import motion.easing.Cubic;
+import motion.easing.Elastic;
+import motion.easing.Expo;
+import motion.easing.Linear;
+import motion.easing.Quad;
+import motion.easing.Quart;
+import motion.easing.Quint;
+import motion.easing.Sine;
+
+import com.stencyl.graphics.shaders.BasicShader;
+import com.stencyl.graphics.shaders.GrayscaleShader;
+import com.stencyl.graphics.shaders.SepiaShader;
+import com.stencyl.graphics.shaders.InvertShader;
+import com.stencyl.graphics.shaders.GrainShader;
+import com.stencyl.graphics.shaders.ExternalShader;
+import com.stencyl.graphics.shaders.InlineShader;
+import com.stencyl.graphics.shaders.BlurShader;
+import com.stencyl.graphics.shaders.SharpenShader;
+import com.stencyl.graphics.shaders.ScanlineShader;
+import com.stencyl.graphics.shaders.CSBShader;
+import com.stencyl.graphics.shaders.HueShader;
+import com.stencyl.graphics.shaders.TintShader;
+import com.stencyl.graphics.shaders.BloomShader;
+
+
+
+class Design_6_6_Slowdown extends ActorScript
+{          	
+	
+public var _RightKey:String;
+
+public var _LeftKey:String;
+
+public var _GroundSlowdown:Float;
+
+public var _AirSlowdown:Float;
+
+public var _DuckingSlowdown:Float;
+
+public var _MovingAirSlowdown:Float;
+
+public var _MovingGroundSlowdown:Float;
+
+ 
+ 	public function new(dummy:Int, actor:Actor, engine:Engine)
+	{
+		super(actor, engine);	
+		nameMap.set("Actor", "actor");
+nameMap.set("Right Key", "_RightKey");
+nameMap.set("Left Key", "_LeftKey");
+nameMap.set("Ground Slowdown", "_GroundSlowdown");
+_GroundSlowdown = 0.9;
+nameMap.set("Air Slowdown", "_AirSlowdown");
+_AirSlowdown = 0.99;
+nameMap.set("Ducking Slowdown", "_DuckingSlowdown");
+_DuckingSlowdown = 0.975;
+nameMap.set("Moving Air Slowdown", "_MovingAirSlowdown");
+_MovingAirSlowdown = 0.975;
+nameMap.set("Moving Ground Slowdown", "_MovingGroundSlowdown");
+_MovingGroundSlowdown = 0.9;
+
+	}
+	
+	override public function init()
+	{
+		    
+/* ======================== When Creating ========================= */
+        /* "Inputs: ----------------------" */
+        /* "\"On Ground?\" -- <Boolean> Actor Level Attribute, from \"On Ground\" Behavior" */
+        /* "\"Is Ducking?\" -- <Boolean> Actor Level Attribute, from \"Ducking\" Behavior" */
+        /* "\"Is Slope Sliding?\" -- <Boolean> Actor Level Attribute, from \"Slope Detection\" Behavior" */
+        /* "Outputs: ---------------------" */
+        /* "None" */
+    
+/* ======================== When Updating ========================= */
+addWhenUpdatedListener(null, function(elapsedTime:Float, list:Array<Dynamic>):Void
+{
+if(wrapper.enabled)
+{
+        if(asBoolean(actor.getActorValue("Is Slope Sliding?")))
+{
+            return;
+}
+
+        if((asBoolean(actor.getActorValue("Is Ducking?")) && asBoolean(actor.getActorValue("On Ground?"))))
+{
+            actor.setXVelocity((actor.getXVelocity() * _DuckingSlowdown));
+            return;
+}
+
+        if(((!(isKeyDown(_RightKey)) && !(isKeyDown(_LeftKey))) && !(asBoolean(actor.getActorValue("Is Ducking?")))))
+{
+            if(asBoolean(actor.getActorValue("On Ground?")))
+{
+                actor.setXVelocity((actor.getXVelocity() * _GroundSlowdown));
+}
+
+            else
+{
+                actor.setXVelocity((actor.getXVelocity() * _AirSlowdown));
+}
+
+}
+
+        else
+{
+            if(asBoolean(actor.getActorValue("On Ground?")))
+{
+
+}
+
+            else
+{
+                actor.setXVelocity((actor.getXVelocity() * _MovingAirSlowdown));
+}
+
+}
+
+}
+});
+
+	}	      	
+	
+	override public function forwardMessage(msg:String)
+	{
+		
+	}
+}

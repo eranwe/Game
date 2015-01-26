@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+    <group eventID="1" id="0">
+        <init comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <ignore-screen-tolerance comment="false" x="26" y="40">
+                    <ACTOR eid="this" id="0"/>
+                </ignore-screen-tolerance>
+                <anchor-screen comment="false" x="26" y="67">
+                    <ACTOR eid="this" id="0"/>
+                </anchor-screen>
+                <set-val-29-4 comment="false" x="26" y="94">
+                    <false comment="false" id="0" x="0" y="0"/>
+                </set-val-29-4>
+                <do-on-platform comment="false" x="26" y="119">
+                    <group eventID="-1" id="-1">
+                        <die comment="false" x="37" y="146">
+                            <ACTOR eid="this" id="0"/>
+                        </die>
+                    </group>
+                    <int id="0" val="6"/>
+                </do-on-platform>
+            </group>
+        </init>
+    </group>
+    <group eventID="1" id="-1"/>
+    <group eventID="2" id="0">
+        <step comment="false" x="15" y="15">
+            <group eventID="-1" id="-1">
+                <if comment="false" x="26" y="40">
+                    <group eventID="-1" id="-1">
+                        <set-val-29-4 comment="false" x="37" y="78">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-29-4>
+                        <setanim comment="false" x="37" y="103">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-29-2 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                        <simulate-key comment="false" x="37" y="135">
+                            <int id="0" val="0"/>
+                            <get-val-29-3 comment="false" id="1" x="0" y="0"/>
+                        </simulate-key>
+                    </group>
+                    <and comment="false" id="0" x="0" y="0">
+                        <not comment="false" id="0" x="0" y="0">
+                            <get-val-29-4 comment="false" id="0" x="0" y="0"/>
+                        </not>
+                        <amousestate comment="false" id="1" x="0" y="0">
+                            <ACTOR eid="this" id="0"/>
+                            <int id="1" val="1"/>
+                        </amousestate>
+                    </and>
+                </if>
+                <if comment="false" x="26" y="179">
+                    <group eventID="-1" id="-1">
+                        <set-val-29-4 comment="false" x="37" y="212">
+                            <false comment="false" id="0" x="0" y="0"/>
+                        </set-val-29-4>
+                        <setanim comment="false" x="37" y="237">
+                            <ACTOR eid="this" id="0"/>
+                            <get-val-29-1 comment="false" id="1" x="0" y="0"/>
+                        </setanim>
+                        <simulate-key comment="false" x="37" y="269">
+                            <int id="0" val="1"/>
+                            <get-val-29-3 comment="false" id="1" x="0" y="0"/>
+                        </simulate-key>
+                    </group>
+                    <amousestate comment="false" id="0" x="0" y="0">
+                        <ACTOR eid="this" id="0"/>
+                        <int id="1" val="2"/>
+                    </amousestate>
+                </if>
+            </group>
+        </step>
+    </group>
+    <group eventID="2" id="-1"/>
+</groups>
